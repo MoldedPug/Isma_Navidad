@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi nene Isma ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            background: #1a472a;
+            background-image: 
+                radial-gradient(white 2px, transparent 2px),
+                radial-gradient(white 2px, transparent 2px);
+            background-size: 50px 50px;
+            background-position: 0 0, 25px 25px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 2rem;
+            max-width: 600px;
+            width: 90%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .decoration {
+            position: absolute;
+            font-size: 2rem;
+        }
+
+        .holly-1 { top: 10px; left: 10px; }
+        .holly-2 { top: 10px; right: 10px; }
+        .holly-3 { bottom: 10px; left: 10px; }
+        .holly-4 { bottom: 10px; right: 10px; }
+
+        h1 {
+            color: #c41e3a;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 2em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .message-area {
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid #1a472a;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .snow {
+            color: #c41e3a;
+            position: absolute;
+            font-size: 1.5rem;
+            animation: fall 10s linear infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-20px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(600px) rotate(360deg); opacity: 0; }
+        }
+
+        .message {
+            white-space: pre-line;
+            margin-bottom: 1rem;
+        }
+
+        .signature {
+            text-align: right;
+            color: #1a472a;
+            font-style: italic;
+            margin-top: 1rem;
+        }
+
+        .hearts {
+            text-align: center;
+            font-size: 1.5rem;
+            margin: 1rem 0;
+            color: #c41e3a;
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <span class="decoration holly-1">🎄</span>
+        <span class="decoration holly-2">🎅</span>
+        <span class="decoration holly-3">🎁</span>
+        <span class="decoration holly-4">⛄</span>
+        
+        <h1>Para mi amor Isma</h1>
+        
+        <div class="hearts">❤️ 💝 ❤️</div>
+        
+        <div class="message-area">
+            <div class="message">
+Feliz Navidad, niño. A estas alturas de la película, sabrás que te quiero mucho y que, aunque sea un regalito muy tonto, espero que te guste. Dejando lo material a un lado, quiero decirte que eres lo más bonito que me ha pasado este año y que no me arrepiento de volver a escribirte ni un solo día (aún). Estos dos mesecitos tontos nos han ayudado a conocernos mucho, y sigo sorprendido con el hecho —que no "hecho"— de que sigas siendo igual de mono y genuino que el día que te conocí.
+
+Aún no puedo hacer ningún tipo de juicio porque es muy poco tiempo, pero quiero decir que, de momento, eres mi niño favorito. Por favor, SÁCATE YA el puto carnet o hazte pasivo, último aviso.
+
+Valoro mucho el espacio que me has estado dando este tiempo y que tengas paciencia conmigo, porque no siempre es fácil. Me encanta que sepas cuándo darme mi tiempo, pero también cuándo acercarte para recordarme que estás ahí. Me haces sentir querido de una manera muy especial, y creo que eso no lo sabe hacer cualquiera. Por eso, aunque te dé el coñazo a veces (porque lo hago, no lo niegues), quiero que sepas que lo que tenemos me importa un montón y me esfuerzo para que tú también lo sientas así. Así que nada, sigue siendo tan tú como siempre, porque eso ya es suficiente para que cada día me guste más estar contigo.
+            </div>
+            <div class="signature">
+                TQ,<br>
+                Uri ❤️
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function createSnowflakes() {
+            const symbols = ['❄️', '⭐', '✨'];
+            const body = document.querySelector('body');
+            
+            setInterval(() => {
+                const snowflake = document.createElement('span');
+                snowflake.className = 'snow';
+                snowflake.style.left = Math.random() * 100 + 'vw';
+                snowflake.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+                body.appendChild(snowflake);
+                
+                setTimeout(() => {
+                    snowflake.remove();
+                }, 10000);
+            }, 1000);
+        }
+
+        createSnowflakes();
+    </script>
+</body>
+</html>
